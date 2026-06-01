@@ -1,31 +1,33 @@
-# File Handling in Python: Count Lines Not Starting with 'T'
+# Exception Handling in Python: Avoiding Index Errors
 
 ## 🎯 Aim
-To write a Python program that counts the number of lines in a text file `story.txt` that do **not** start with the alphabet `'T'`.
+To write a Python program that handles an **IndexError** when trying to access an element beyond the available range of a list.
 
 ## 🧠 Algorithm
-1. Open the file `story.txt` in **read mode**.
-2. Initialize a counter `count` to zero.
-3. Iterate through each line of the file:
-   - Check if the first character of the line is **not** `'T'`.
-   - If the line does not start with `'T'`, increment the `count` by 1.
-4. After processing all lines, print the `count` value, which represents the number of lines that do not start with `'T'`.
+1. Define a list `list1` with some integer elements.
+2. Use a **try-except** block:
+   - In the `try` block, attempt to access an index that is out of range (e.g., `list1[5]`).
+   - In the `except` block, catch the error and print a custom message `"You're out of list range"`.
+3. Print the result based on whether the index access succeeds or fails.
 
 ## 🧾 Program
 ```
-def returnSum(myDict):
-    final=0
-    for i in myDict.values():
-        final+=i
-    return final
-#driver functions
-myDict = {'a': 100, 'b': 200, 'c': 300}
-print("Sum :",returnSum(myDict))
+try:
+    # Taking 3 elements input from the user
+    L = []
+    for i in range(3):
+        item = ['laptop','mobile','pen']
+        L.append(item)
+
+    # Trying to access index 4
+    print(L[4])
+except IndexError:
+    print("check index range")
 ```
 
 ## Output
 
-<img width="482" height="192" alt="518002723-a754cd09-ff0e-4941-8029-f74caaaba557" src="https://github.com/user-attachments/assets/5e2179a8-fe93-44c3-9cf5-09d7db57f411" />
+<img width="506" height="225" alt="518002297-d3ebc277-3549-49b8-a621-3a8446f8c34e" src="https://github.com/user-attachments/assets/9aee233d-cd65-4268-a137-b1ec43f1365c" />
 
 ## Result
-Thus,the program has been executed successfully.
+Thus the program executed successfully.
